@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Custom Theme Variables */
+  --color-primary: #c5a059;
+  --color-secondary: #f8f8f8;
+  --color-accent: #111111;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --primary: #c5a059;
+  --primary-foreground: #ffffff;
+  --secondary: #f8f8f8;
+  --accent: #1a1a1a;
+  --sidebar-width: 280px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --secondary: #1a1a1a;
+    --accent: #c5a059;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 21px !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enforce 21px font size strictly as requested */
+* {
+  font-size: 21px !important;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+button,
+input,
+select,
+textarea,
+a {
+  font-size: 21px !important;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  background: var(--secondary);
+  border-right: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.card {
+  background: var(--background);
+  border: 1px solid rgba(197, 160, 89, 0.2);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 20px rgba(197, 160, 89, 0.1);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
